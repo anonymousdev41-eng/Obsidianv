@@ -305,13 +305,13 @@
                 <div class="widget">
                     <h3>IP CONFIGURATION</h3>
                     <div style="color: var(--primary-color);">MASKING ACTIVE</div>
-                    <div style="font-size: 0.8rem; color: #666; margin-top: 5px;">NODE: FRANKFURT_04</div>
+                    <div style="font-size: 0.8rem; color: #666; margin-top: 5px;">NODE: ZURICH_04</div>
                 </div>
                 <div class="widget">
                     <h3>ACTIVITY LOG</h3>
                     <div style="font-family: monospace; font-size: 0.7rem; color: #888; line-height: 1.4;">
-                        > Handshake accepted<br>
-                        > Token verified<br>
+                        > Payment verified<br>
+                        > Token accepted<br>
                         > Ledger sync complete<br>
                         > <span style="color: var(--accent-color)">Session established</span>
                     </div>
@@ -360,7 +360,7 @@
         if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
 
         // 2. SECURITY CHECK
-        // Must have basic Auth AND Active Session Token
+        // Must have basic Auth AND Active Session Token from token.html
         if (!sessionStorage.getItem('vault_auth') || !sessionStorage.getItem('vault_session_active')) {
             window.location.href = 'index.html';
         }
